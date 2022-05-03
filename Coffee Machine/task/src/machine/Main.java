@@ -14,12 +14,12 @@ public class Main {
             switch (machine.state) {
                 case SHOW_MENU:
                     machine.showMainMenu();
-                    input = scanner.nextLine();
+                    input = scanner.next();
                     machine.runMachine(input);
                     break;
                 case BUY_COFFEE:
                     machine.showCoffeeChoiceMenu();
-                    input = scanner.nextLine();
+                    input = scanner.next();
                     machine.buyCoffee(input);
                     break;
                 case FILL_WATER:
