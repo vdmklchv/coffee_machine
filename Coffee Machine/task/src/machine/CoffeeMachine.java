@@ -37,6 +37,8 @@ public class CoffeeMachine {
         System.out.printf("%d disposable cups\n", this.cups);
         System.out.printf("$%d of money\n", this.cash);
         System.out.println();
+
+        this.state = SHOW_MENU;
     }
 
     void runMachine(String input) {
@@ -49,10 +51,10 @@ public class CoffeeMachine {
                 this.state = FILL_WATER;
                 break;
             case "take":
-                takeMoneyFromMachine();
+                this.state = TAKE;
                 break;
             case "remaining":
-                printMachineState();
+                this.state = REMAINING;
                 break;
             case "exit":
                 this.state = STOPPED;
